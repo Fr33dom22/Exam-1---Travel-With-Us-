@@ -1,0 +1,173 @@
+@use "./base/reset";
+@use "./abstracts/vars" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 295px;
+  background: url("../assets/img/header-background.webp") no-repeat center/cover;
+  width: 100%;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $white;
+
+  .title_1 {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.08;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 8px;
+  }
+
+  .title_2 {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.27;
+    letter-spacing: 0.31em;
+    color: $white;
+    margin-bottom: 48px;
+  }
+
+  .search {
+    min-width: 647px;
+    margin-bottom: 211px;
+    padding: 4px 5px;
+    position: relative;
+
+    &__inp {
+      width: 100%;
+      padding: 20px 190px 20px 36px;
+      border: none;
+      outline: none;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.2em;
+
+      &::placeholder {
+        color: $text-grey;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      border: none;
+      background: $accent;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      padding: 16px 24px;
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $white;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: $accent-darker;
+      }
+
+      .search__icon {
+        width: 16px;
+        height: 16px;
+        fill: $white;
+      }
+    }
+  }
+
+  .scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    margin-bottom: 120px;
+
+    &__icon {
+      width: 14px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    &__text {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0.2em;
+      text-align: center;
+      color: $white;
+    }
+
+    &:hover {
+      color: $blue;
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+  }
+}
+
+/* Nav */
+.nav-wrap {
+  width: 100%;
+  background-color: $accent;
+
+  .nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .logo__title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .menu {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.menu a {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $white;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.icon-burger {
+  display: none;
+}

@@ -1,0 +1,749 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 295px;
+  background: url("../assets/img/header-background.webp") no-repeat center/cover;
+  width: 100%;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.first-screen .title_1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.first-screen .title_2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.27;
+  letter-spacing: 0.31em;
+  color: #fff;
+  margin-bottom: 48px;
+}
+.first-screen .search {
+  min-width: 647px;
+  margin-bottom: 211px;
+  padding: 4px 5px;
+  position: relative;
+}
+.first-screen .search__inp {
+  width: 100%;
+  padding: 20px 190px 20px 36px;
+  border: none;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.2em;
+}
+.first-screen .search__inp::placeholder {
+  color: #999;
+}
+.first-screen .search__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+  background: #5373fd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 24px;
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.first-screen .search__btn:hover {
+  background: #486bfe;
+}
+.first-screen .search__btn .search__icon {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+.first-screen .scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 120px;
+}
+.first-screen .scroll-down__icon {
+  width: 14px;
+  height: 16px;
+  fill: currentColor;
+}
+.first-screen .scroll-down__text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #fff;
+}
+.first-screen .scroll-down:hover {
+  color: #00a2ff;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Nav */
+.nav-wrap {
+  width: 100%;
+  background-color: #5373fd;
+}
+.nav-wrap .nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.nav-wrap .logo__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nav-wrap .menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: #0800ff;
+}
+
+.icon-burger {
+  display: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 300px;
+}
+
+/* Main content */
+.about-screen__container {
+  width: 100%;
+  background: url("../assets/img/why-background.webp") no-repeat center/cover;
+  padding-top: 124px;
+  padding-bottom: 124px;
+}
+
+.about__container {
+  display: flex;
+  gap: 136px;
+  align-items: center;
+}
+
+.about__why {
+  max-width: 648px;
+}
+
+.about__title {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.about__text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.about__btn {
+  position: relative;
+  background: #5373fd;
+  border: none;
+  cursor: pointer;
+  padding: 20px 32px;
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  transition: background 0.3s;
+}
+.about__btn-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.about__btn-text {
+  position: relative;
+  z-index: 1;
+}
+.about__btn:hover, .about__btn:focus {
+  transform: scale(1.05);
+  background: rgb(108.2068965517, 135.5172413793, 253.2931034483);
+}
+
+.about-img__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.about-img-first {
+  align-self: flex-end;
+  margin-right: 74px;
+}
+
+.about-img-second {
+  margin-left: 74px;
+}
+
+.services {
+  background: #333;
+  padding-top: 107px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.services__container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.services-line {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 0;
+}
+
+.services-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  min-width: calc((100% - 48px) / 3);
+}
+
+.services__icon-wrap {
+  background-color: #333;
+  border-radius: 48px;
+  padding: 16px;
+  margin-bottom: 4px;
+}
+
+.services-icon {
+  display: block;
+}
+
+.services__text {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+}
+
+.tour-first {
+  width: 100%;
+  background: url("../assets/img/tour-first.webp") no-repeat center/cover;
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+
+.tour__img-wrap {
+  max-width: 648px;
+  background: rgba(35, 35, 35, 0.9);
+  padding: 44px 32px;
+}
+
+.tour-country {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.tour-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.tour-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.tour__btn {
+  position: relative;
+  background: #5373fd;
+  border: none;
+  cursor: pointer;
+  padding: 20px 56px;
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  transition: background 0.3s;
+}
+.tour__btn-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tour__btn-text {
+  position: relative;
+  z-index: 1;
+}
+.tour__btn:hover, .tour__btn:focus {
+  transform: scale(1.05);
+  background: rgb(108.2068965517, 135.5172413793, 253.2931034483);
+}
+
+.tour-second {
+  width: 100%;
+  background: url("../assets/img/tour-second.webp") no-repeat center/cover;
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+
+.tour-second__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tourists {
+  width: 100%;
+  background: url("../assets/img/what-tourist-say-bg.webp") no-repeat center/cover;
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+
+.tourists__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tourists-title {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.tourists-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.tourists-info {
+  padding: 48px 60px;
+  align-items: center;
+  background-color: #333;
+}
+
+.tourists-title-name {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.tourists-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.tourists-icon {
+  fill: #5373fd;
+}
+
+.footer {
+  background-color: #000;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-footer {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.logo-subtitle {
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-icons-wrap {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.footer-icon {
+  fill: #fff;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+.footer-icon:hover, .footer-icon:focus {
+  fill: #5373fd;
+  transform: scale(1.25);
+  transition: transform 0.3s;
+}
+
+.footer-icon-link {
+  display: block;
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    padding-left: 110px;
+    padding-right: 110px;
+    max-width: 1360px;
+  }
+  .about__container {
+    gap: 60px;
+  }
+  .services {
+    padding-top: 122px;
+    padding-bottom: 45px;
+  }
+  .services-line {
+    top: 81px;
+  }
+  .services__text {
+    font-size: 36px;
+    min-width: auto;
+  }
+  .header {
+    background: url("../assets/img/1360/header-background.webp") no-repeat center/cover;
+  }
+  .about-screen__container {
+    background: url("../assets/img/1360/why-background.webp") no-repeat center/cover;
+  }
+  .about__why {
+    max-width: 558px;
+  }
+  .tour-first {
+    background: url("../assets/img/1360/tour-first.webp") no-repeat center/cover;
+  }
+  .tour-second {
+    background: url("../assets/img/1360/tour-second.webp") no-repeat center/cover;
+  }
+  .tourists {
+    background: url("../assets/img/1360/what-tourist-say-bg.webp") no-repeat center/cover;
+  }
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .services-line {
+    top: 87px;
+  }
+  .services-line {
+    max-width: 640px;
+  }
+  .header {
+    background: url("../assets/img/1024/header-background.webp") no-repeat center/cover;
+  }
+  .about-screen__container {
+    background: url("../assets/img/1024/why-background.webp") no-repeat center/cover;
+  }
+  .about__why {
+    max-width: 550px;
+  }
+  .tour-first {
+    background: url("../assets/img/1024/tour-first.webp") no-repeat center/cover;
+  }
+  .tour-second {
+    background: url("../assets/img/1024/tour-second.webp") no-repeat center/cover;
+    padding-top: 220px;
+    padding-bottom: 120px;
+  }
+  .tourists {
+    background: url("../assets/img/1024/what-tourist-say-bg.webp") no-repeat center/cover;
+  }
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 768px;
+  }
+  .header {
+    background: url("../assets/img/768/header-background.webp") no-repeat center/cover;
+  }
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .about-screen__container {
+    background: url("../assets/img/768/why-background.webp") no-repeat center/cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .about__container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+  .about__why {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-img__container {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .about-img__container img {
+    margin: 0;
+    width: 348px;
+  }
+  .tourists {
+    background: url("../assets/img/768/what-tourist-say-bg.webp") no-repeat center/cover;
+  }
+  .about-img-first {
+    background: url("../assets/img/768/why-img-1.webp") no-repeat center/cover;
+  }
+  .about-img-second {
+    background: url("../assets/img/768/why-img-2.webp") no-repeat center/cover;
+  }
+  .services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .services__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .services-line {
+    display: none;
+  }
+  .tour-first {
+    background: url("../assets/img/768/tour-first.webp") no-repeat center/cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .tour-second {
+    background: url("../assets/img/768/tour-second.webp") no-repeat center/cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .tour__img-wrap {
+    max-width: 720px;
+  }
+  .tourists {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  .tourists-wrap {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 576px;
+  }
+  .header {
+    background: url("../assets/img/576/header-background.webp") no-repeat center/cover;
+  }
+  .first-screen .search {
+    min-width: 540px;
+  }
+  .first-screen .search__inp {
+    padding: 20px 83px 20px 36px;
+  }
+  .nav-wrap .nav {
+    display: none;
+  }
+  .nav-wrap .nav__container {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 146px;
+  }
+  .nav-wrap .logo__title {
+    justify-content: center;
+  }
+  .nav-wrap .icon-burger {
+    fill: #fff;
+    display: block;
+    cursor: pointer;
+    transition: fill 0.3s;
+  }
+  .nav-wrap .icon-burger:hover, .nav-wrap .icon-burger:focus {
+    fill: #0800ff;
+    transform: scale(1.25);
+    transition: transform 0.3s;
+  }
+  .about-screen__container {
+    background: url("../assets/img/576/why-background.webp") no-repeat center/cover;
+  }
+  .about__why {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-img__container img {
+    width: 258px;
+  }
+  .tour-first {
+    background: url("../assets/img/576/tour-first.webp") no-repeat center/cover;
+  }
+  .tour-second {
+    background: url("../assets/img/576/tour-second.webp") no-repeat center/cover;
+  }
+  .tourists {
+    background: url("../assets/img/576/what-tourist-say-bg.webp") no-repeat center/cover;
+  }
+  .about-img-first {
+    background: url("../assets/img/576/why-img-1.webp") no-repeat center/cover;
+  }
+  .about-img-second {
+    background: url("../assets/img/576/why-img-2.webp") no-repeat center/cover;
+  }
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,305 @@
+@use "./base/reset";
+@use "./abstracts/vars" as *;
+
+html,
+body {
+  font-size: 16px;
+  font-family: $font-family;
+  color: $dark-grey;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 300px;
+}
+
+/* Main content */
+.about-screen__container {
+  width: 100%;
+  background: url("../assets/img/why-background.webp") no-repeat center/cover;
+  padding-top: 124px;
+  padding-bottom: 124px;
+}
+
+.about__container {
+  display: flex;
+  gap: 136px;
+
+  align-items: center;
+}
+
+.about__why {
+  max-width: 648px;
+}
+
+.about__title {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: capitalize;
+  color: $white;
+  margin-bottom: 24px;
+}
+
+.about__text {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: $white;
+  margin-bottom: 32px;
+}
+
+.about__btn {
+  position: relative;
+  background: $accent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 32px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  transition: background 0.3s;
+
+  &-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    background: lighten($accent, 5%);
+  }
+}
+
+.about-img__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.about-img-first {
+  align-self: flex-end;
+  margin-right: 74px;
+}
+
+.about-img-second {
+  margin-left: 74px;
+}
+
+.services {
+  background: $dark-grey;
+  padding-top: 107px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.services__container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.services-line {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 0;
+}
+
+.services-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  min-width: calc((100% - 48px) / 3);
+}
+
+.services__icon-wrap {
+  background-color: $dark-grey;
+  border-radius: 48px;
+  padding: 16px;
+  margin-bottom: 4px;
+}
+
+.services-icon {
+  display: block;
+}
+
+.services__text {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  text-align: center;
+  color: $white;
+}
+
+.tour-first {
+  width: 100%;
+  background: url("../assets/img/tour-first.webp") no-repeat center/cover;
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+
+.tour__img-wrap {
+  max-width: 648px;
+  background: rgba(35, 35, 35, 0.9);
+  padding: 44px 32px;
+}
+
+.tour-country {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: $white;
+  margin-bottom: 16px;
+}
+
+.tour-title {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 16px;
+}
+
+.tour-text {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: $white;
+  margin-bottom: 24px;
+}
+
+.tour__btn {
+  position: relative;
+  background: $accent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 56px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  transition: background 0.3s;
+
+  &-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    background: lighten($accent, 5%);
+  }
+}
+
+.tour-second {
+  width: 100%;
+  background: url("../assets/img/tour-second.webp") no-repeat center/cover;
+  padding-top: 220px;
+  padding-bottom: 120px;
+}
+
+.tour-second__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tourists {
+  width: 100%;
+  background: url("../assets/img/what-tourist-say-bg.webp") no-repeat
+    center/cover;
+  padding-top: 120px;
+  padding-bottom: 180px;
+}
+
+.tourists__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tourists-title {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  text-align: center;
+  color: $white;
+  margin-bottom: 60px;
+}
+
+.tourists-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.tourists-info {
+  padding: 48px 60px;
+  align-items: center;
+  background-color: $dark-grey;
+}
+
+.tourists-title-name {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 10px;
+}
+
+.tourists-text {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  color: $white;
+}
+
+.tourists-icon {
+  fill: $accent;
+}

@@ -1,0 +1,310 @@
+// ========== 1360px ==========
+@media screen and (max-width: 1360px) {
+  .container {
+    padding-left: 110px;
+    padding-right: 110px;
+    max-width: 1360px;
+  }
+
+  .about__container {
+    gap: 60px;
+  }
+
+  .services {
+    padding-top: 122px;
+    padding-bottom: 45px;
+  }
+
+  .services-line {
+    top: 81px;
+  }
+
+  .services__text {
+    font-size: 36px;
+    min-width: auto;
+  }
+
+  .header {
+    background: url("../assets/img/1360/header-background.webp") no-repeat
+      center/cover;
+  }
+
+  .about-screen__container {
+    background: url("../assets/img/1360/why-background.webp") no-repeat
+      center/cover;
+  }
+
+  .about__why {
+    max-width: 558px;
+  }
+
+  .tour-first {
+    background: url("../assets/img/1360/tour-first.webp") no-repeat center/cover;
+  }
+
+  .tour-second {
+    background: url("../assets/img/1360/tour-second.webp") no-repeat
+      center/cover;
+  }
+
+  .tourists {
+    background: url("../assets/img/1360/what-tourist-say-bg.webp") no-repeat
+      center/cover;
+  }
+
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}
+
+// ========== 1024px ==========
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .services-line {
+    top: 87px;
+  }
+
+  .services-line {
+    max-width: 640px;
+  }
+
+  .header {
+    background: url("../assets/img/1024/header-background.webp") no-repeat
+      center/cover;
+  }
+
+  .about-screen__container {
+    background: url("../assets/img/1024/why-background.webp") no-repeat
+      center/cover;
+  }
+
+  .about__why {
+    max-width: 550px;
+  }
+
+  .tour-first {
+    background: url("../assets/img/1024/tour-first.webp") no-repeat center/cover;
+  }
+
+  .tour-second {
+    background: url("../assets/img/1024/tour-second.webp") no-repeat
+      center/cover;
+    padding-top: 220px;
+    padding-bottom: 120px;
+  }
+
+  .tourists {
+    background: url("../assets/img/1024/what-tourist-say-bg.webp") no-repeat
+      center/cover;
+  }
+
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}
+
+// ========== 768px ==========
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 768px;
+  }
+
+  .header {
+    background: url("../assets/img/768/header-background.webp") no-repeat
+      center/cover;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .about-screen__container {
+    background: url("../assets/img/768/why-background.webp") no-repeat
+      center/cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .about__why {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img__container {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .about-img__container img {
+    margin: 0;
+    width: 348px;
+  }
+
+  .tourists {
+    background: url("../assets/img/768/what-tourist-say-bg.webp") no-repeat
+      center/cover;
+  }
+
+  .about-img-first {
+    background: url("../assets/img/768/why-img-1.webp") no-repeat center/cover;
+  }
+
+  .about-img-second {
+    background: url("../assets/img/768/why-img-2.webp") no-repeat center/cover;
+  }
+
+  .services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .services__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .services-line {
+    display: none;
+  }
+
+  .tour-first {
+    background: url("../assets/img/768/tour-first.webp") no-repeat center/cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .tour-second {
+    background: url("../assets/img/768/tour-second.webp") no-repeat center/cover;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .tour__img-wrap {
+    max-width: 720px;
+  }
+
+  .tourists {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  .tourists-wrap {
+    flex-direction: column;
+  }
+}
+
+// ========== 576px ==========
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 576px;
+  }
+
+  .header {
+    background: url("../assets/img/576/header-background.webp") no-repeat
+      center/cover;
+  }
+
+  .first-screen {
+    .search {
+      min-width: 540px;
+
+      &__inp {
+        padding: 20px 83px 20px 36px;
+      }
+    }
+  }
+
+  .nav-wrap {
+    .nav {
+      display: none;
+    }
+
+    .nav__container {
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 146px;
+    }
+
+    .logo__title {
+      justify-content: center;
+    }
+
+    .icon-burger {
+      fill: $white;
+      display: block;
+      cursor: pointer;
+      transition: fill 0.3s;
+
+      &:hover,
+      &:focus {
+        fill: $dark-blue;
+        transform: scale(1.25);
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  .about-screen__container {
+    background: url("../assets/img/576/why-background.webp") no-repeat
+      center/cover;
+  }
+
+  .about__why {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img__container img {
+    width: 258px;
+  }
+
+  .tour-first {
+    background: url("../assets/img/576/tour-first.webp") no-repeat center/cover;
+  }
+
+  .tour-second {
+    background: url("../assets/img/576/tour-second.webp") no-repeat center/cover;
+  }
+
+  .tourists {
+    background: url("../assets/img/576/what-tourist-say-bg.webp") no-repeat
+      center/cover;
+  }
+
+  .about-img-first {
+    background: url("../assets/img/576/why-img-1.webp") no-repeat center/cover;
+  }
+
+  .about-img-second {
+    background: url("../assets/img/576/why-img-2.webp") no-repeat center/cover;
+  }
+
+  .review-img {
+    background: url("../assets/img/576/review-img.webp") no-repeat center/cover;
+  }
+}
