@@ -225,11 +225,13 @@ body {
   margin-bottom: 32px;
 }
 
-.about__btn {
+.about__btn,
+.tour__btn {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #5373fd;
-  border: none;
-  cursor: pointer;
   padding: 20px 32px;
   font-family: "Aleo", sans-serif;
   font-weight: 400;
@@ -237,22 +239,27 @@ body {
   line-height: 1.25;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  text-align: center;
   color: #fff;
-  transition: background 0.3s;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
 }
-.about__btn-icon {
+.about__btn-icon,
+.tour__btn-icon {
   position: absolute;
   left: 0;
   top: 0;
 }
-.about__btn-text {
+.about__btn-text,
+.tour__btn-text {
   position: relative;
   z-index: 1;
 }
-.about__btn:hover, .about__btn:focus {
-  transform: scale(1.05);
+.about__btn:hover, .about__btn:focus,
+.tour__btn:hover,
+.tour__btn:focus {
   background: rgb(108.2068965517, 135.5172413793, 253.2931034483);
+  transform: scale(1.05);
 }
 
 .about-img__container {
@@ -367,9 +374,10 @@ body {
 
 .tour__btn {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #5373fd;
-  border: none;
-  cursor: pointer;
   padding: 20px 56px;
   font-family: "Aleo", sans-serif;
   font-weight: 400;
@@ -379,7 +387,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 .tour__btn-icon {
   position: absolute;
@@ -391,8 +400,8 @@ body {
   z-index: 1;
 }
 .tour__btn:hover, .tour__btn:focus {
-  transform: scale(1.05);
   background: rgb(108.2068965517, 135.5172413793, 253.2931034483);
+  transform: scale(1.05);
 }
 
 .tour-second {

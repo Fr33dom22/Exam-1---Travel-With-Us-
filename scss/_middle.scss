@@ -54,11 +54,13 @@ body {
   margin-bottom: 32px;
 }
 
-.about__btn {
+.about__btn,
+.tour__btn {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: $accent;
-  border: none;
-  cursor: pointer;
   padding: 20px 32px;
   font-family: $second-family;
   font-weight: 400;
@@ -66,9 +68,10 @@ body {
   line-height: 1.25;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  text-align: center;
   color: $white;
-  transition: background 0.3s;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
 
   &-icon {
     position: absolute;
@@ -83,8 +86,8 @@ body {
 
   &:hover,
   &:focus {
-    transform: scale(1.05);
     background: lighten($accent, 5%);
+    transform: scale(1.05);
   }
 }
 
@@ -200,9 +203,10 @@ body {
 
 .tour__btn {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: $accent;
-  border: none;
-  cursor: pointer;
   padding: 20px 56px;
   font-family: $second-family;
   font-weight: 400;
@@ -212,7 +216,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: $white;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 
   &-icon {
     position: absolute;
@@ -227,11 +232,10 @@ body {
 
   &:hover,
   &:focus {
-    transform: scale(1.05);
     background: lighten($accent, 5%);
+    transform: scale(1.05);
   }
 }
-
 .tour-second {
   width: 100%;
   background: url("../assets/img/tour-second.webp") no-repeat center/cover;
