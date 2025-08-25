@@ -37,14 +37,16 @@
   }
 
   .search {
-    min-width: 647px;
-    margin-bottom: 211px;
-    padding: 4px 5px;
     position: relative;
+    width: 100%;
+    max-width: 647px;
+    margin: 0 auto 211px auto;
+    box-sizing: border-box;
 
     &__inp {
       width: 100%;
       padding: 20px 190px 20px 36px;
+      box-sizing: border-box;
       border: none;
       outline: none;
       font-family: $font-family;
@@ -61,15 +63,17 @@
     &__btn {
       position: absolute;
       top: 50%;
+      right: 5px;
       transform: translateY(-50%);
-      right: 10px;
-      border: none;
-      background: $accent;
+      width: 120px;
+      padding: 16px 24px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 12px;
-      padding: 16px 24px;
+      border: none;
+      background: $accent;
+      cursor: pointer;
       font-family: $second-family;
       font-weight: 400;
       font-size: 14px;
@@ -77,7 +81,6 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: $white;
-      cursor: pointer;
       transition: background 0.3s;
 
       &:hover {
@@ -88,6 +91,7 @@
         width: 16px;
         height: 16px;
         fill: $white;
+        flex-shrink: 0;
       }
     }
   }
@@ -97,7 +101,6 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
-
     margin-bottom: 120px;
 
     &__icon {
@@ -123,7 +126,6 @@
     }
   }
 }
-
 /* Nav */
 .nav-wrap {
   width: 100%;

@@ -49,14 +49,16 @@ a {
   margin-bottom: 48px;
 }
 .first-screen .search {
-  min-width: 647px;
-  margin-bottom: 211px;
-  padding: 4px 5px;
   position: relative;
+  width: 100%;
+  max-width: 647px;
+  margin: 0 auto 211px auto;
+  box-sizing: border-box;
 }
 .first-screen .search__inp {
   width: 100%;
   padding: 20px 190px 20px 36px;
+  box-sizing: border-box;
   border: none;
   outline: none;
   font-family: "Josefin Sans", sans-serif;
@@ -71,15 +73,17 @@ a {
 .first-screen .search__btn {
   position: absolute;
   top: 50%;
+  right: 5px;
   transform: translateY(-50%);
-  right: 10px;
-  border: none;
-  background: #5373fd;
+  width: 120px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 12px;
-  padding: 16px 24px;
+  border: none;
+  background: #5373fd;
+  cursor: pointer;
   font-family: "Aleo", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -87,7 +91,6 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
-  cursor: pointer;
   transition: background 0.3s;
 }
 .first-screen .search__btn:hover {
@@ -97,6 +100,7 @@ a {
   width: 16px;
   height: 16px;
   fill: #fff;
+  flex-shrink: 0;
 }
 .first-screen .scroll-down {
   display: flex;
@@ -598,9 +602,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .container {
-    padding-left: 24px;
-    padding-right: 24px;
     max-width: 768px;
+    box-sizing: border-box;
+    padding: 0 24px;
   }
   .header {
     background: url("../assets/img/768/header-background.webp") no-repeat center/cover;
@@ -609,6 +613,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+  }
+  .first-screen .search {
+    position: relative;
+    width: calc(100% - 120px);
+    max-width: 647px;
+    margin: 0 auto 211px auto;
   }
   .about-screen__container {
     background: url("../assets/img/768/why-background.webp") no-repeat center/cover;
@@ -628,15 +638,36 @@ body {
     text-align: center;
   }
   .about-img__container {
+    display: flex;
     flex-direction: row;
     gap: 24px;
+    overflow-x: hidden;
   }
   .about-img__container img {
     margin: 0;
-    width: 348px;
+    width: clamp(200px, 48%, 348px);
+    flex-shrink: 1;
   }
   .tourists {
     background: url("../assets/img/768/what-tourist-say-bg.webp") no-repeat center/cover;
+    padding: 60px 0 120px 0;
+  }
+  .tourists-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tourists-img, .tourists-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .tourists-img img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .about-img-first {
     background: url("../assets/img/768/why-img-1.webp") no-repeat center/cover;
@@ -659,74 +690,79 @@ body {
   }
   .tour-first {
     background: url("../assets/img/768/tour-first.webp") no-repeat center/cover;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
   }
   .tour-second {
     background: url("../assets/img/768/tour-second.webp") no-repeat center/cover;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
   }
   .tour__img-wrap {
     max-width: 720px;
   }
-  .tourists {
-    padding-top: 60px;
-    padding-bottom: 120px;
-  }
-  .tourists-wrap {
-    flex-direction: column;
-  }
 }
 @media screen and (max-width: 576px) {
   .container {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 0 18px;
     max-width: 576px;
+    box-sizing: border-box;
   }
   .header {
     background: url("../assets/img/576/header-background.webp") no-repeat center/cover;
   }
   .first-screen .search {
-    min-width: 540px;
+    position: relative;
+    width: calc(100% - 36px);
+    max-width: 540px;
+    margin: 0 auto 211px auto;
   }
-  .first-screen .search__inp {
+  .first-screen__inp {
     padding: 20px 83px 20px 36px;
   }
   .nav-wrap .nav {
     display: none;
   }
   .nav-wrap .nav__container {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 146px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-wrap .logo__title {
-    justify-content: center;
+    margin: 0 auto;
   }
   .nav-wrap .icon-burger {
-    fill: #fff;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
+    fill: #fff;
     cursor: pointer;
-    transition: fill 0.3s;
+    transition: fill 0.3s, transform 0.3s;
   }
   .nav-wrap .icon-burger:hover, .nav-wrap .icon-burger:focus {
     fill: #0800ff;
     transform: scale(1.25);
-    transition: transform 0.3s;
   }
   .about-screen__container {
     background: url("../assets/img/576/why-background.webp") no-repeat center/cover;
   }
   .about__why {
-    max-width: 540px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+  .about-img__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+  }
   .about-img__container img {
-    width: 258px;
+    width: calc(50% - 8px);
+    flex-shrink: 1;
   }
   .tour-first {
     background: url("../assets/img/576/tour-first.webp") no-repeat center/cover;
@@ -736,6 +772,23 @@ body {
   }
   .tourists {
     background: url("../assets/img/576/what-tourist-say-bg.webp") no-repeat center/cover;
+    padding: 60px 0;
+  }
+  .tourists-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tourists-img, .tourists-info {
+    width: 100%;
+  }
+  .tourists-img img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .about-img-first {
     background: url("../assets/img/576/why-img-1.webp") no-repeat center/cover;
